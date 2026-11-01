@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Products</div>
+  <h1>Our Products</h1>
+  <p>Kitchen trolleys and modular furniture — all custom-made to your size and specification.</p>
+</div>
+<section style="background:var(--black)">
+  <div class="products-header">
+    <div>
+      <div class="section-label reveal">Product Catalogue</div>
+      <h2 class="section-title reveal">Trolleys &amp; Furniture</h2>
+    </div>
+    <div class="product-filter reveal">
+      <button class="filter-btn <%= category==='all'?'active':'' %>" data-filter="all">All Products</button>
+      <button class="filter-btn <%= category==='trolley'?'active':'' %>" data-filter="trolley">Kitchen Trolleys</button>
+      <button class="filter-btn <%= category==='furniture'?'active':'' %>" data-filter="furniture">Kitchen Furniture</button>
+    </div>
+  </div>
+  <div class="product-grid">
+    <% products.forEach((p, i) => { %>
+    <div class="product-card reveal" data-category="<%= p.category %>" style="transition-delay:<%= i*0.07 %>s">
+      <div class="product-img">
+        <%= p.emoji %>
+        <div class="shine"></div>
+        <% if(p.tag) { %><div class="p-tag"><%= p.tag %></div><% } %>
+        <div class="p-cat"><%= p.category.toUpperCase() %></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name"><%= p.name %></div>
+        <p class="product-desc"><%= p.desc %></p>
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.8rem">
+          <span>📦 <%= p.material %></span> &nbsp;|&nbsp; <span>📐 <%= p.size %></span>
+        </div>
+        <div class="product-features">
+          <% p.features.forEach(f => { %><span class="feat-chip"><%= f %></span><% }) %>
+        </div>
+        <button class="product-enquire" onclick="enquireProduct('<%= p.name %>')">Enquire Now →</button>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+<%- include('partials/footer') %>

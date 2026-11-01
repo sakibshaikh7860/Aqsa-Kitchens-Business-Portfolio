@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Contact</div>
+  <h1>Get In Touch</h1>
+  <p>Send an enquiry and we'll respond within 24 hours with a free quote.</p>
+</div>
+<section id="contact">
+  <div class="contact-wrap">
+    <div>
+      <div class="section-label reveal-l">Contact Us</div>
+      <h2 class="section-title reveal-l">Let's Build Your Perfect Kitchen</h2>
+      <p class="section-sub reveal-l">Fill the form or reach us directly via phone or WhatsApp. We respond within 24 hours.</p>
+      <div class="contact-info">
+        <div class="contact-item reveal-l"><div class="contact-icon">📞</div><div><div class="contact-label">PHONE / WHATSAPP</div><div class="contact-val"><a href="tel:+919876543210">+91 98765 43210</a></div></div></div>
+        <div class="contact-item reveal-l" style="transition-delay:.1s"><div class="contact-icon">📧</div><div><div class="contact-label">EMAIL</div><div class="contact-val"><a href="mailto:info@aqsakitchens.in">info@aqsakitchens.in</a></div></div></div>
+        <div class="contact-item reveal-l" style="transition-delay:.2s"><div class="contact-icon">📍</div><div><div class="contact-label">WORKSHOP</div><div class="contact-val">MIDC Industrial Area, Ahmednagar, Maharashtra — 414001</div></div></div>
+        <div class="contact-item reveal-l" style="transition-delay:.3s"><div class="contact-icon">🕐</div><div><div class="contact-label">WORKING HOURS</div><div class="contact-val">Mon–Sat: 9:00 AM – 7:00 PM</div></div></div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="enquiry-form">
+        <div class="form-title">Send an Enquiry</div>
+        <div class="form-sub">Get a free quote for your custom kitchen trolley or furniture</div>
+        <form id="enquiryForm">
+          <div class="form-row">
+            <div class="form-group"><label>FULL NAME *</label><input type="text" name="name" placeholder="Your Name" required/></div>
+            <div class="form-group"><label>PHONE *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+          </div>
+          <div class="form-group"><label>EMAIL</label><input type="email" name="email" placeholder="your@email.com"/></div>
+          <div class="form-group">
+            <label>PRODUCT INTEREST *</label>
+            <select name="product" required>
+              <option value="">Select a product...</option>
+              <option>Classic 3-Shelf Kitchen Trolley</option>
+              <option>Chef's Modular Trolley</option>
+              <option>Compact Corner Trolley</option>
+              <option>Custom Restaurant Rack</option>
+              <option>Modular Kitchen Cabinet</option>
+              <option>Kitchen Island Table</option>
+              <option>Tea &amp; Snack Trolley</option>
+              <option>Custom / Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>CITY</label><input type="text" name="city" placeholder="Your City"/></div>
+            <div class="form-group"><label>QUANTITY</label><input type="number" name="quantity" placeholder="1" min="1"/></div>
+          </div>
+          <div class="form-group"><label>REQUIREMENTS</label><textarea name="message" placeholder="Describe your size, material preference, or any special requirement..."></textarea></div>
+          <button type="submit" class="submit-btn">Send Enquiry →</button>
+          <div id="formMsg" class="form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>
